@@ -14,13 +14,13 @@ import { signVc } from "../../utils/";
 // @NOTE: You will edit and use this component in the Success step
 import { Success } from "../Success";
 
-export interface IssueCredentialFlowProps {
+/** IssueCredentialFlow props:
   issuer: string;
   recipient: Profile; // @NOTE: This prop contains information (name, profile image URL) about the recipient of the issued credential that you may use in the success step
   initialCredential: VC;
-}
+*/
 
-export const IssueCredentialFlow: React.FC<IssueCredentialFlowProps> = (props) => {
+export const IssueCredentialFlow = (props) => {
   const [cred, setCred] = React.useState(props.initialCredential);
 
   return (
