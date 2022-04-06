@@ -1,13 +1,20 @@
 import * as React from "react";
 import { Box, CircularProgress } from "@mui/material";
+
 import { ProfileView } from "./ProfileView";
+import { ProfileLoader } from "./ProfileLoader";
+import { ApiService } from "../../utils/ApiService";
 
-export const ProfilesList: React.FC<{ dids?: string[] }> = ({ dids }) => {
-  const [loading, setLoading] = React.useState(!dids);
+export const ProfilesList: React.FC = (props) => {
+  const [loading, setLoading] = React.useState(true);
 
-  if (!dids) {
-    throw new Error("API fetching for DIDs not yet implemented - please implement me!");
-  }
+  const api = React.useMemo(() => new ApiService(), []);
+  // @NOTE: Example api usage:
+  // console.log(await api.getProfileViaDid("did:3:kjzl6cwe1jw148uyox3goiyrwwe3aab8vatm3apxqisd351ww0dj6v5e3f61e8b"));
+
+  throw new Error(
+    "@TODO: Please implement me using ApiService and ProfileView or ProfileLoader! This component should display all of the profiles one after the other.",
+  );
 
   if (loading) {
     return (
@@ -17,5 +24,9 @@ export const ProfilesList: React.FC<{ dids?: string[] }> = ({ dids }) => {
     );
   }
 
-  return <Box>{dids && dids.map((did) => <ProfileView did={did} />)}</Box>;
+  return (
+    <Box>
+      Coming soon!
+    </Box>
+  );
 };
