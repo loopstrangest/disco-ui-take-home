@@ -10,7 +10,7 @@ export default {
 
 const Template: ComponentStory<typeof DiscoText> = () => (
   <Typography variant="h1">
-    <DiscoText>Disco</DiscoText>
+    <DiscoText>Test</DiscoText>
   </Typography>
 );
 
