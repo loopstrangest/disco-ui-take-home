@@ -183,6 +183,6 @@ export const EXAMPLE_CREDENTIAL: VC = {
   issuanceDate: "2022-03-11T15:19:53.418Z",
   credentialSubject: {
     id: "did:ethr:0x8563388a129510F7c6ea2C6755E66a8937587b1d",
-    kudos: "Thanks for working on this exercise!",
+    kudos: "",
   },
 };

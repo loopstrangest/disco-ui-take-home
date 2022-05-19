@@ -31,9 +31,10 @@ export const Credential: React.FC<{ cred: VC }> = ({ cred }) => {
       sx={{
         backgroundColor: "#26262F",
         borderRadius: "4px",
-        maxWidth: "480px",
+        //maxWidth: "480px",
         overflow: "hidden",
         width: "100%",
+        marginBottom:"16px",
       }}
     >
       <CredentialHeader>

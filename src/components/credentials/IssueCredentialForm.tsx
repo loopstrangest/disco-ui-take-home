@@ -6,7 +6,7 @@ import { dateTimeFormat, isoToDatetimeLocal } from "../../utils/";
 
 export const IssueCredentialForm: React.FC<{ cred: VC; onChange(newValue: VC): void }> = ({ cred, onChange }) => {
   return (
-    <Box sx={{ maxWidth: "400px" }}>
+    <Box>
       <FormControl fullWidth sx={{ marginBottom: 3 }}>
         <Typography variant="body2">Recipient DID</Typography>
         <TextField
