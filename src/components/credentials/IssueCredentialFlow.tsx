@@ -23,6 +23,7 @@ export interface IssueCredentialFlowProps {
 
 export const IssueCredentialFlow: React.FC<IssueCredentialFlowProps> = (props) => {
   const [cred, setCred] = React.useState(props.initialCredential);
+  const [profile, setProfile] = React.useState(props.recipient);
   const [step, setStep] = React.useState("EDIT");
   
   const editStep =
@@ -53,13 +54,8 @@ export const IssueCredentialFlow: React.FC<IssueCredentialFlowProps> = (props) =
     
   const successStep =
     <Box>
-      <Success>
-        <Typography variant="h5" sx={{textAlign: "center", marginBottom:"16px"}}>Success!</Typography>
-        <Typography variant="body1" sx={{textAlign: "center", marginBottom: "4px", fontWeight:"bold"}}>Kudos sent to:</Typography>
-        <Typography variant="body1" sx={{textAlign: "center", marginBottom: "16px"}}>{cred.credentialSubject.id}</Typography>
-        <Typography variant="body1" sx={{textAlign: "center", marginBottom: "4px", fontWeight:"bold"}}>Kudos:</Typography>
-        <Typography variant="body1" sx={{textAlign: "center", marginBottom: "16px"}}>{cred.credentialSubject.kudos}</Typography>
-        <DiscoButton onClick={() => changeStep("EDIT")}>Close</DiscoButton>
+      <Success cred={cred} credType="Kudos" profile={profile} >
+        <DiscoButton onClick={() => changeStep("EDIT")}>Close</DiscoButton>What!
       </Success>
     </Box>;
     
